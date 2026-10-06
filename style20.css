@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.gol {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    position: absolute;
+}
+.utga {
+    background-color: var(--ongo);
+    width: var(--toirog-size);
+    height: var(--toirog-size);
+    border: var(--border);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px  rgb(100, 216, 255);
+}
+.blur {
+    filter: blur(2px);
+}
+.roll {
+    animation: roll var(--roll) linear infinite;
+}
+@keyframes roll  {
+    from {
+        transform: translate(-50%, -50%) 
+        rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) 
+        rotate(360deg);
+    }
+}
+.roll-reverse {
+    animation: roll-reverse var(--roll) linear infinite;
+}
+@keyframes roll-reverse {
+    from {
+        transform: translate(-50%, -50%)
+        rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%)
+        rotate(-360deg);
+    }
+}
